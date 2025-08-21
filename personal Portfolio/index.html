@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - 3D Interactive Experience</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <h2>MRD</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#bio" class="nav-link">Bio</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <div class="home-text">
+                <div class="glitch-text" data-text="Hello, I'm">Hello, I'm</div>
+                <h1 class="hero-title">
+                    <span class="name-highlight" id="hero-name">Manas Ranjan Dikshit</span>
+                </h1>
+                <p class="hero-subtitle" id="hero-subtitle">Software Developer & Java Developer</p>
+                <div class="hero-buttons">
+                    <button class="btn-3d primary" id="download-cv">
+                        <i class="fas fa-download"></i>
+                        Download CV
+                    </button>
+                    <button class="btn-3d secondary" onclick="scrollToSection('contact')">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
+                    </button>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Manas-Dikshit" class="social-link" id="github-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/manas-ranjan-dikshit" class="social-link" id="linkedin-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/manasss01_?igsh=aXYxZXdjN3IwMzY3" class="social-link" id="instagram-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/Manas-Ranjan-Dikshit/" class="social-link" id="leetcode-link" target="_blank">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/user/manasranjanunnu/?_gl=1*1wbf0uv*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwyvfDBhDYARIsAItzbZE-FX4nWTYuPWPMIr4IoFWDGv_cudSq-byKTcFjK_3bt2uEh91BMvYaAuGnEALw_wcB&gbraid=0AAAAAC9yBkDG2XR0ViHst6xOZZ5uidrTw" class="social-link" id="gfg-link" target="_blank">
+                        <i class="fas fa-laptop-code"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="home-image">
+                <div class="image-container floating">
+                    <img src="photos/manas.jpg" alt="Profile" class="profile-img">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section id="bio" class="section bio-section">
+        <div class="section-header">
+            <h2 class="section-title morphing-title">About Me</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="bio-content">
+            <div class="bio-image">
+                <div class="bio-image-container tilt-effect">
+                    <img src="photos/1734853604114.jpg" alt="About Me" class="bio-img">
+                    <div class="bio-image-overlay"></div>
+                </div>
+            </div>
+            <div class="bio-text">
+                <div class="bio-card glassmorphism">
+                    <p class="bio-description" id="bio-description">
+                        💻 B.Tech CSE SUIIT'28 | 🚀 Aspiring Java Developer | 🔥 Java + DSA | 🛠️ Open Source Contributor | 🎤 Speaker & Motivator | 📚 Frontend & Version Control
+                    </p>
+                    <div class="bio-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="experience-years">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="projects-completed">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="clients-served">15+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="section-header">
+            <h2 class="section-title">Education Journey</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="education-timeline" id="education-timeline">
+                <!-- Education items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="section-header">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="experience-grid" id="experience-grid">
+            <!-- Experience cards will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="projects-carousel">
+            <div class="projects-container" id="projects-container">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" id="prev-project">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" id="next-project">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="section-header">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="skills-container">
+            <div class="skills-grid" id="skills-grid">
+                <!-- Skill cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements-section">
+        <div class="section-header">
+            <h2 class="section-title">Achievements</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="achievements-container">
+            <div class="achievements-grid" id="achievements-grid">
+                <!-- Achievement cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-card glassmorphism">
+                    <h3>Let's Connect</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span id="contact-email">manasdikshit48@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span id="contact-phone">Abhi nahi</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="contact-location">Sambalpur, Odisha</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form class="form-3d" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn-3d primary submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 MRD. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
