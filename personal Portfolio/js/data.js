@@ -5,7 +5,7 @@ const portfolioData = {
         name: "Manas Ranjan Dikshit",
         title: "Software Developer & Java Developer",
         bio: "💻 B.Tech CSE SUIIT'28 | 🚀 Aspiring Java Developer | 🔥 Java + DSA | 🛠️ Open Source Contributor | 🎤 Speaker & Motivator | 📚 Frontend & Version Control",
-        cvUrl: "/Manas_Ranjan_Dikshit.docx",
+        cvUrl: "/Manas_Ranjan_Dikshit.pdf",
         stats: {
             experience: "1+",
             projects: "10+",
@@ -315,4 +315,5 @@ const portfolioData = {
 // Export for use in other files (if using modules)
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = portfolioData;
+
 }
