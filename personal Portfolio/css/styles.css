@@ -416,6 +416,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: clamp(2rem, 6vw, 4rem);
     align-items: center;
+    justify-items: center;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -433,6 +434,10 @@ body {
 .home-text {
     z-index: 2;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .glitch-text {
@@ -488,12 +493,14 @@ body {
 }
 
 .name-highlight {
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     position: relative;
     display: inline-block;
-    animation: float 3s ease-in-out infinite;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 0.2em 0.6em;
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
 }
 
 @keyframes float {
@@ -631,7 +638,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    order: -1;
+    order: 0;
+    height: 100%;
 }
 
 @media (min-width: 769px) {
